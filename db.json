@@ -4,7 +4,7 @@
       "id": 1,
       "nombre": "Administrador General",
       "correo": "admin@correo.com",
-      "password": "cliente123",
+      "password": "admin123",
       "rol": "admin"
     },
     {
@@ -13,13 +13,6 @@
       "correo": "cliente@correo.com",
       "password": "cliente123",
       "rol": "cliente"
-    },
-    {
-      "nombre": "Ruisu",
-      "correo": "ruisuimpact@gmail.com",
-      "password": "",
-      "rol": "cliente",
-      "id": 1753856628541
     }
   ],
   "reservas": []
