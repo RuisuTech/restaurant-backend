@@ -1,12 +1,15 @@
 const jsonServer = require("json-server");
+const cors = require("cors");
 const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
+server.use(cors());
 server.use(middlewares);
-server.use(router);
+server.use(jsonServer.bodyParser);
+server.use("/usuarios", router);
+server.use("/reservas", router);
 
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  console.log(`JSON Server está corriendo en el puerto ${PORT}`);
+server.listen(process.env.PORT || 3000, () => {
+  console.log("JSON Server corriendo con CORS");
 });
